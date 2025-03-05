@@ -27,9 +27,13 @@
             width: 150px;
             height: 150px;
         }
-        .sidebar a {
-            display: block;
-            margin: 10px 0;
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .links a {
             text-decoration: none;
             color: #0073e6;
         }
@@ -45,37 +49,76 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h2, h3 {
             color: #444;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <h1>Seu Nome</h1>
+        <h1>Peterson Florindo</h1>
         <img src="sua_foto.jpg" alt="Sua Foto">
         <p>Olá, este é meu portfólio de projetos. Aqui, compartilho como aplico análise de dados, estatística e machine learning na resolução de problemas de negócios.</p>
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">E-mail</a>
+        <div class="links">
+            <a href="#">LinkedIn</a> |
+            <a href="#">Portfólio</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">E-mail</a>
+        </div>
     </div>
     <div class="content">
         <div class="section">
-            <h2>Habilidades Técnicas</h2>
+            <h2>Portfólio</h2>
+            <h3>Sobre mim</h3>
+            <p>Profissional com experiência em análise de dados e habilidades em desenvolvimento de modelos preditivos, estatística, versionamento de código e dashboards para visualização de dados e tomada de decisão.</p>
+            <p>Minha experiência em análise de dados na Saúde Pública durante a graduação, deu origem à minha trajetória na área. Durante esse período, percebi como a análise de dados pode impactar significativamente a melhoria de processos e potencializar a geração de resultados positivos.</p>
+            <p>Atualmente, estou cursando a formação Cientista de Dados pela Data Science Academy e concluí a formação em Data Science do programa Santander Coders, uma parceria entre a Ada Tech e a Santander Open Academy.</p>
+            <p>Meu objetivo é apoiar empresas na tomada de decisões estratégicas, oferecendo soluções baseadas em dados para impulsionar o crescimento e a inovação.</p>
+            <h3>Habilidades Técnicas</h3>
             <ul>
-                <li>Linguagens: Python, SQL, R</li>
-                <li>Ferramentas: Docker, Excel, Git, Power BI</li>
+                <li><strong>Linguagens:</strong> Python, R e SQL</li>
+                <li><strong>Ferramentas:</strong> Docker, Excel, Git e Power BI.</li>
             </ul>
         </div>
         <div class="section">
-            <h2>Projetos</h2>
-            <h3>Pipeline de Dados: ETL com Airflow, Python e Visualizações no Power BI</h3>
-            <p><strong>Contexto:</strong> Construção de um pipeline de dados para análise de vendas de uma loja fictícia.</p>
-            <p><strong>Objetivos:</strong> Implementar um pipeline ETL, extrair e transformar dados, disponibilizar em formato acessível para análise.</p>
-            <p><strong>Resultados:</strong> Identificação de padrões de consumo e impacto de avaliações de produtos nas vendas.</p>
-            <p><strong>Ferramentas utilizadas:</strong> Airflow, Docker, Git, PostgreSQL, Power BI, Python, SQL, Visual Studio Code.</p>
-            <p><a href="#">Ver projeto no GitHub</a></p>
+            <h2>Projetos de Análise de Dados</h2>
+            
+            <div class="project">
+                <h3>Pipeline de Dados: ETL com Airflow, Python e Visualizações no Power BI</h3>
+                <img src="pipeline_etl.png" alt="Pipeline ETL">
+                <p><strong>Contexto:</strong> Este projeto teve como foco a construção de um pipeline de dados para análise de vendas de uma loja online fictícia, utilizando a FakeStoreAPI. Ele abrange todas as etapas de um processo ETL (Extração, Transformação e Carregamento), além do desenvolvimento de dashboards no Power BI para visualização dos dados.</p>
+                
+                <p><strong>Objetivos:</strong></p>
+                <ul>
+                    <li>Implementar um pipeline ETL utilizando Python em conjunto com Docker, Airflow e PostgreSQL, demonstrando a integração dessas ferramentas.</li>
+                    <li>Extrair e transformar dados da FakeStoreAPI, organizando informações sobre produtos, carrinhos e usuários para análises detalhadas.</li>
+                    <li>Realizar análises descritivas e diagnósticas para identificar padrões de vendas e comportamento do consumidor.</li>
+                    <li>Disponibilizar os dados transformados em um formato acessível para visualização analítica no Power BI.</li>
+                </ul>
+                
+                <p><strong>Resultados:</strong></p>
+                <ul>
+                    <li>As análises revelaram que as categorias “men’s clothing” e “electronics” lideram em volume de vendas. Recomenda-se investir em campanhas de marketing direcionadas a essas categorias, além de criar combos promocionais que combinem produtos mais vendidos com itens de menor desempenho, promovendo a diversificação e contribuindo para o aumento do ticket médio.</li>
+                    <li>A análise revelou uma relação positiva entre as avaliações e o volume de vendas, indicando que produtos bem avaliados têm maior impacto nas vendas. Implementar um sistema automatizado que incentive os clientes a deixarem feedbacks pode resultar em um aumento do volume de vendas.</li>
+                    <li>Alguns produtos receberam avaliações baixas, destacando a importância de uma análise detalhada para identificar os motivos dessas classificações. Essa abordagem permite implementar melhorias nos produtos, prevenindo impactos negativos na reputação da marca e fortalecendo a confiança dos clientes, além de impulsionar as vendas.</li>
+                </ul>
+                
+                <p><strong>Ferramentas e linguagens utilizadas:</strong></p>
+                <ul>
+                    <li>Airflow</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>PostgreSQL</li>
+                    <li>Power BI</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Visual Studio Code</li>
+                </ul>
+                
+                <p><a href="#">Ver projeto no GitHub</a></p>
+            </div>
         </div>
     </div>
 </body>
 </html>
+
