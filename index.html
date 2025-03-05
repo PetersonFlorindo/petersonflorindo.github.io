@@ -9,37 +9,34 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #fff;
             color: #333;
+            display: flex;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #444;
-            color: white;
+        .sidebar {
+            width: 25%;
+            background: #f4f4f4;
             padding: 20px;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
             text-align: center;
         }
-        .profile {
-            text-align: center;
-            padding: 20px;
-        }
-        .profile img {
+        .sidebar img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
         }
-        .links {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .links a {
-            margin: 0 10px;
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
             text-decoration: none;
             color: #0073e6;
+        }
+        .content {
+            margin-left: 30%;
+            width: 65%;
+            padding: 20px;
         }
         .section {
             background: white;
@@ -54,19 +51,15 @@
     </style>
 </head>
 <body>
-    <header>
+    <div class="sidebar">
         <h1>Seu Nome</h1>
-    </header>
-    <div class="container">
-        <div class="profile">
-            <img src="sua_foto.jpg" alt="Sua Foto">
-            <p>Olá, este é meu portfólio de projetos. Aqui, compartilho como aplico análise de dados, estatística e machine learning na resolução de problemas de negócios.</p>
-        </div>
-        <div class="links">
-            <a href="#">LinkedIn</a> | 
-            <a href="#">GitHub</a> | 
-            <a href="#">E-mail</a>
-        </div>
+        <img src="sua_foto.jpg" alt="Sua Foto">
+        <p>Olá, este é meu portfólio de projetos. Aqui, compartilho como aplico análise de dados, estatística e machine learning na resolução de problemas de negócios.</p>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">E-mail</a>
+    </div>
+    <div class="content">
         <div class="section">
             <h2>Habilidades Técnicas</h2>
             <ul>
