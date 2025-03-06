@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio - Peterson Florindo</title>
     <style>
-        /* Configuração geral */
+        /* Layout geral */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #f8f9fa;
             color: #333;
             display: flex;
             flex-wrap: wrap;
@@ -19,80 +19,96 @@
         /* Sidebar fixa */
         .sidebar {
             width: 100%;
-            max-width: 300px; /* Define um tamanho máximo para evitar que fique muito grande */
+            max-width: 280px;  /* Reduz a largura fixa */
             background: #f4f4f4;
             padding: 20px;
             position: fixed;
             height: 100vh;
             overflow-y: auto;
             text-align: center;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Melhor efeito de separação */
         }
 
+        /* Ajuste na imagem do perfil */
         .sidebar img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+            object-fit: cover;
         }
 
+        /* Links da sidebar */
         .links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
             margin-top: 10px;
         }
 
         .links a {
             text-decoration: none;
             color: #0073e6;
+            font-weight: bold;
         }
 
         /* Conteúdo principal */
         .content {
-            margin-left: 320px; /* Deixa espaço para a sidebar */
+            margin-left: 300px; /* Mantém alinhado com a sidebar */
             flex-grow: 1;
-            padding: 20px;
-            max-width: calc(100% - 320px);
+            padding: 40px;
+            max-width: calc(100% - 320px); /* Ajusta automaticamente */
         }
 
-        /* Seções */
+        /* Seções do portfólio */
         .section {
             background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais elegante */
         }
 
+        /* Títulos */
         h2, h3 {
-            color: #444;
+            color: #222;
         }
 
-        /* Responsividade para telas menores */
+        /* Projetos */
+        .project {
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Imagem dos projetos responsiva */
+        .project img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsividade */
         @media screen and (max-width: 900px) {
             .sidebar {
                 width: 100%;
                 height: auto;
                 position: relative;
                 max-width: none;
+                padding-bottom: 10px;
             }
 
             .content {
                 margin-left: 0;
                 max-width: 100%;
+                padding: 20px;
             }
-        }
-
-        /* Imagem do projeto responsiva */
-        .project img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%; /* Evita que ultrapasse o container */
-            height: auto;
         }
     </style>
 </head>
 <body>
+
     <!-- Barra lateral -->
     <div class="sidebar">
         <h1>Peterson Florindo</h1>
@@ -153,5 +169,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
