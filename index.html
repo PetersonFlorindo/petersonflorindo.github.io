@@ -53,62 +53,70 @@
         }
 
         /* Conteúdo principal */
+/* Formatação geral do conteúdo */
         .content {
-            margin-left: 300px; /* Mantém alinhado com a sidebar */
+            margin-left: 300px; /* Garante que não fique sobre a sidebar */
             flex-grow: 1;
             padding: 40px;
-            max-width: calc(100% - 320px); /* Ajusta automaticamente */
+            max-width: calc(100% - 320px);
         }
-
+        
         /* Seções do portfólio */
         .section {
             background: white;
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais elegante */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
-        /* Títulos */
-        h2, h3 {
+        
+        /* Títulos principais */
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
             color: #222;
+            margin-bottom: 10px;
         }
-
-        /* Projetos */
-        .project {
-            text-align: center;
-            padding: 20px;
+        
+        /* Títulos de subseções (Ex: "Objetivos", "Resultados") */
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
-
-        /* Imagem dos projetos responsiva */
+        
+        /* Parágrafos do texto */
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify; /* Garante que o texto fique bem distribuído */
+            color: #444;
+        }
+        
+        /* Listas (Objetivos e Resultados) */
+        ul {
+            list-style-type: disc; /* Usa bullets padrão */
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+        
+        ul li {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 8px; /* Espaçamento entre os itens */
+        }
+        
+        /* Imagens */
         .project img {
             display: block;
             margin: 0 auto;
-            width: 50%;  /* Define a largura como 50% do container */
-            height: auto;  /* Mantém a proporção original */
+            max-width: 100%;
+            height: auto;
             border-radius: 8px;
         }
-
-        /* Responsividade */
-        @media screen and (max-width: 900px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                max-width: none;
-                padding-bottom: 10px;
-            }
-
-            .content {
-                margin-left: 0;
-                max-width: 100%;
-                padding: 20px;
-            }
-            ul {
-                list-style-position: outside;  /* Mantém os bullets à esquerda do texto */
-                text-align: left;  /* Alinha o texto à esquerda */
-                padding-left: 20px;  /* Adiciona um espaçamento padrão */
-            }
         }
     </style>
 </head>
