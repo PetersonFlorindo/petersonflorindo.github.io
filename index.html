@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio</title>
     <style>
+        /* Configuração geral */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -12,9 +13,13 @@
             background-color: #fff;
             color: #333;
             display: flex;
+            flex-wrap: wrap;
         }
+
+        /* Sidebar fixa */
         .sidebar {
-            width: 25%;
+            width: 100%;
+            max-width: 300px; /* Define um tamanho máximo para evitar que fique muito grande */
             background: #f4f4f4;
             padding: 20px;
             position: fixed;
@@ -22,26 +27,35 @@
             overflow-y: auto;
             text-align: center;
         }
+
         .sidebar img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
         }
+
         .links {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             margin-top: 10px;
         }
+
         .links a {
             text-decoration: none;
             color: #0073e6;
         }
+
+        /* Conteúdo principal */
         .content {
-            margin-left: 30%;
-            width: 65%;
+            margin-left: 320px; /* Deixa espaço para a sidebar */
+            flex-grow: 1;
             padding: 20px;
+            max-width: calc(100% - 320px);
         }
+
+        /* Seções */
         .section {
             background: white;
             padding: 20px;
@@ -49,12 +63,37 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h2, h3 {
             color: #444;
+        }
+
+        /* Responsividade para telas menores */
+        @media screen and (max-width: 900px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                max-width: none;
+            }
+
+            .content {
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+
+        /* Imagem do projeto responsiva */
+        .project img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Evita que ultrapasse o container */
+            height: auto;
         }
     </style>
 </head>
 <body>
+    <!-- Barra lateral -->
     <div class="sidebar">
         <h1>Peterson Florindo</h1>
         <img src="sua_foto.jpg" alt="Sua Foto">
@@ -67,6 +106,8 @@
             <a href="#">E-mail</a>
         </div>
     </div>
+
+    <!-- Conteúdo principal -->
     <div class="content">
         <div class="section">
             <h2>Portfólio</h2>
@@ -75,51 +116,42 @@
             <p>No Growth, dei meus primeiros passos com relatórios estratégicos, aprimorando minha capacidade analítica. Em análise de dados para vendas, aprendi a transformar dados em decisões mais inteligentes, aplicando métricas de conversão e segmentação para refinar a prospecção de leads e otimizar processos.</p>
             <p>Na engenharia, implementei automações que reduziram o tempo de geração de relatórios e tornaram os processos mais ágeis e eficientes. Essas experiências aprimoraram minha capacidade de estruturar, automatizar e analisar dados para otimizar processos, gerar insights estratégicos e apoiar a tomada de decisões orientadas por dados.</p>
             <p>Cursando MBA em Data Science (USP/Esalq), aprimoro minha capacidade analítica com machine learning, big data e inteligência artificial, expandindo minha atuação para soluções preditivas e inteligência de mercado. Busco transformar dados em estratégias que impulsionem eficiência e inovação nas empresas.</p>
+
             <h3>Habilidades Técnicas</h3>
             <ul>
                 <li><strong>Linguagens:</strong> Python, SQL, VBA e DAX</li>
                 <li><strong>Ferramentas:</strong> Power BI, Tableau e Excel.</li>
             </ul>
         </div>
+
+        <!-- Projetos -->
         <div class="section">
             <h2>Projetos de Análise de Dados</h2>
             
             <div class="project">
                 <h3>Pipeline de Dados: ETL com Airflow, Python e Visualizações no Power BI</h3>
-                <img src="eda_cfm.png" alt="eda_cfm" style="display: block; margin: 0 auto; width: 600px;">
+                <img src="eda_cfm.png" alt="eda_cfm">
                 <p><strong>Contexto:</strong> Este projeto teve como foco a construção de um pipeline de dados para análise de vendas de uma loja online fictícia, utilizando a FakeStoreAPI. Ele abrange todas as etapas de um processo ETL (Extração, Transformação e Carregamento), além do desenvolvimento de dashboards no Power BI para visualização dos dados.</p>
-                
+
                 <p><strong>Objetivos:</strong></p>
                 <ul>
-                    <li>Implementar um pipeline ETL utilizando Python em conjunto com Docker, Airflow e PostgreSQL, demonstrando a integração dessas ferramentas.</li>
-                    <li>Extrair e transformar dados da FakeStoreAPI, organizando informações sobre produtos, carrinhos e usuários para análises detalhadas.</li>
-                    <li>Realizar análises descritivas e diagnósticas para identificar padrões de vendas e comportamento do consumidor.</li>
-                    <li>Disponibilizar os dados transformados em um formato acessível para visualização analítica no Power BI.</li>
+                    <li>Implementar um pipeline ETL utilizando Python em conjunto com Docker, Airflow e PostgreSQL.</li>
+                    <li>Extrair e transformar dados da FakeStoreAPI, organizando informações sobre produtos, carrinhos e usuários.</li>
+                    <li>Realizar análises descritivas e diagnósticas para identificar padrões de vendas.</li>
+                    <li>Disponibilizar os dados transformados para visualização no Power BI.</li>
                 </ul>
-                
+
                 <p><strong>Resultados:</strong></p>
                 <ul>
-                    <li>As análises revelaram que as categorias “men’s clothing” e “electronics” lideram em volume de vendas. Recomenda-se investir em campanhas de marketing direcionadas a essas categorias, além de criar combos promocionais que combinem produtos mais vendidos com itens de menor desempenho, promovendo a diversificação e contribuindo para o aumento do ticket médio.</li>
-                    <li>A análise revelou uma relação positiva entre as avaliações e o volume de vendas, indicando que produtos bem avaliados têm maior impacto nas vendas. Implementar um sistema automatizado que incentive os clientes a deixarem feedbacks pode resultar em um aumento do volume de vendas.</li>
-                    <li>Alguns produtos receberam avaliações baixas, destacando a importância de uma análise detalhada para identificar os motivos dessas classificações. Essa abordagem permite implementar melhorias nos produtos, prevenindo impactos negativos na reputação da marca e fortalecendo a confiança dos clientes, além de impulsionar as vendas.</li>
+                    <li>Identificamos que as categorias “men’s clothing” e “electronics” lideram em volume de vendas.</li>
+                    <li>Correlação positiva entre avaliações e volume de vendas, indicando impacto do feedback dos clientes.</li>
+                    <li>Analisamos produtos com avaliações baixas para identificar oportunidades de melhoria.</li>
                 </ul>
-                
-                <p><strong>Ferramentas e linguagens utilizadas:</strong></p>
-                <ul>
-                    <li>Airflow</li>
-                    <li>Docker</li>
-                    <li>Git</li>
-                    <li>PostgreSQL</li>
-                    <li>Power BI</li>
-                    <li>Python</li>
-                    <li>SQL</li>
-                    <li>Visual Studio Code</li>
-                </ul>
-                
+
+                <p><strong>Ferramentas:</strong> Airflow, Docker, Git, PostgreSQL, Power BI, Python, SQL, Visual Studio Code.</p>
                 <p><a href="#">Ver projeto no GitHub</a></p>
             </div>
         </div>
     </div>
 </body>
 </html>
-
