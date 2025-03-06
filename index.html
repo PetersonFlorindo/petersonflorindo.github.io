@@ -84,8 +84,8 @@
         .project img {
             display: block;
             margin: 0 auto;
-            max-width: 100%;
-            height: auto;
+            width: 50%;  /* Define a largura como 50% do container */
+            height: auto;  /* Mantém a proporção original */
             border-radius: 8px;
         }
 
@@ -103,6 +103,11 @@
                 margin-left: 0;
                 max-width: 100%;
                 padding: 20px;
+            }
+            ul {
+                list-style-position: outside;  /* Mantém os bullets à esquerda do texto */
+                text-align: left;  /* Alinha o texto à esquerda */
+                padding-left: 20px;  /* Adiciona um espaçamento padrão */
             }
         }
     </style>
